@@ -1,0 +1,53 @@
+
+
+
+
+Install Frida.. ADB.. 
+
+
+	frida --v										-> 16.0.9
+	adb shell getprop ro.product.cpu.abi			-> x86_64
+
+https://github.com/frida/frida/releases			-> download frida-server-16.0.9-android-x86_64
+
+
+##Pushing the Proxy’s Certificate - name the certificate cer.cer and install it on the device in the same location as the frida-server.
+
+	adb push cer.cer /data/local/tmp/cert-der.crt 
+
+
+##Frida Server Setup 
+Before injecting our script, we must first run the Frida server on the device. Upload the Frida server binary file to the device. 
+Copy the frida-server-12.4.7-android-x86file to the adb folder and rename it to frida-server.Run the following command: 
+
+
+	adb push "C:\Frida\frida-server" /data/local/tmp 
+	adb shell chmod 777 /data/local/tmp/frida-server 
+
+
+
+##Injecting Script to Bypass SSL Pinning 
+
+	adb push C:\platform-tools_r33.0.3-windows\platform-tools\fridascript.js /data/local/tmp/
+	
+	
+
+##Run the following command on the device 	
+
+	adb shell /data/local/tmp/frida-server & 
+	
+	
+	
+## Run the following command on the device: Next, list all the running processes of devices. 
+	We must now determine the id of our target application. Open a new terminal and type the following command
+	
+	
+
+
+## Inject the fridascript.js script into the target application
+
+	frida -U -f com.twitter.android -l D:\Android Testing\platform-tools\fridascript.js --no-paus
+	
+	
+	
+	
