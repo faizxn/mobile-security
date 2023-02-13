@@ -42,6 +42,7 @@ Copy the frida-server-12.4.7-android-x86file to the adb folder and rename it to 
 	We must now determine the id of our target application. Open a new terminal and type the following command
 	
 	
+	frida-ps -U
 
 
 ## Inject the fridascript.js script into the target application
