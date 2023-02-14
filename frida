@@ -44,6 +44,7 @@ Copy the frida-server-12.4.7-android-x86file to the adb folder and rename it to 
 	
 	objection -g com.link3.fieldforce explore -q
 		[usb] # android sslpinning disable
+		[usb] # android proxy set 192.168.130.164 8888
 	
 	
 ## Run the following command on the device: Next, list all the running processes of devices. 
