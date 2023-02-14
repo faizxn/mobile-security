@@ -38,6 +38,14 @@ Copy the frida-server-12.4.7-android-x86file to the adb folder and rename it to 
 	
 	
 	
+## Testing if Objection is working properly with frida-server from our android
+	
+	objection --gadget "com.android.settings" device-type
+	
+	objection -g com.link3.fieldforce explore -q
+		[usb] # android sslpinning disable
+	
+	
 ## Run the following command on the device: Next, list all the running processes of devices. 
 	We must now determine the id of our target application. Open a new terminal and type the following command
 	
