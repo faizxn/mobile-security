@@ -1,0 +1,11 @@
+
+
+npm install -g apk-mitm
+
+create a folder inside this, put APK files
+
+#apk-mitm com.link3.fieldforce.apk 
+
+it will create patch.apk files disabling ssl pinning.. 
+
+install the patch.apk files, make sure original apk files has been removed. 
