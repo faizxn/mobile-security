@@ -11,4 +11,9 @@ drozer-agent would install to android simulator
 	dz> run app.package.attacksurface com.link3.fieldfoce
 	
 	
-	
+for automated scanning drozscan is recommed to use
+
+https://github.com/themalwarenews/drozscan
+
+
+
