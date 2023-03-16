@@ -9,3 +9,11 @@ create a folder inside this, put APK files
 it will create patch.apk files disabling ssl pinning.. 
 
 install the patch.apk files, make sure original apk files has been removed. 
+
+
+then try with frida or objection to capture the traffic,          [for both frida/objection firda-server must be running]
+
+
+
+
+
