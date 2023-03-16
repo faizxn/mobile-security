@@ -1,0 +1,14 @@
+
+drozer-agent would install to android simulator
+
+-open agent from simulator
+-add this command 
+	adb  forward tcp:31415 tcp:31415
+	drozer console connect
+	
+	dz> ls
+	dz> run app.package.list
+	dz> run app.package.attacksurface com.link3.fieldfoce
+	
+	
+	
