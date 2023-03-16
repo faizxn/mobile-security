@@ -1,0 +1,20 @@
+
+jadx-gui -> analysis 
+
+	-open AndroidManifest.xml, find
+			flag: allowBackup, debuggable, protectionLevel 
+		
+		and check also other application permission
+	
+	
+	-open resources.arsc 
+			res-> values-> strings.xml   find third party url link google firebase link
+			
+	-open resources
+			assets 						 analyse files within assets 
+		
+		
+		
+	-search files, try searching for https, .json, aws_key, awskey, secrect, password etc for sensitive information
+	
+	
