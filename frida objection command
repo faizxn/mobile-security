@@ -1,0 +1,8 @@
+
+
+frida -U -f com.link3.fieldforce -l C:\Frida\fridascript.js --no-paus
+
+objection --gadget com.link3.fieldforce explore --startup-command "android-sslpining-disable"
+
+
+
