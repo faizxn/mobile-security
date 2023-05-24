@@ -1,1 +1,54 @@
 
+	M1: Improper Platform Usage
+	M2: Insecure Data Storage
+	
+		Insecure data storage vulnerabilities occur when application store sensitive information such as username, password, and credit cards numbers in plain text.
+			{Usernames, Authentication tokens, Passwords, Cookies, Location Data, Personal data: DoB, credit card etc}
+			
+	M3: Insecure Communication
+	M4: Insecure Authentication
+	M5: Insufficient Cryptography
+	M6: Insecure Authorization
+	M7: Client Code Quality
+	M8: Code Tampering
+	M9: Reverse Engineering
+	M10: Extraneous Functionality
+
+
+	<DIVA>
+	
+		1. Insecure Login: (sensitive data should not be logged into LOGGING data like username, password, pin and session-id)
+			
+			- adb logcat | grep diva 
+			- adb logcat | grep phone
+
+			go into the source-code of application and analysis the code
+				
+				jakhar.assem.diva->LogActivity using JADX-GUI 
+			- adb logcat | grep "Error while processing transaction with credit card: "		
+				check the output log is plaintext or not
+				
+				
+		2. Hardcoded Issue (Part-1):
+		
+				jakhar.assem.diva->HardcodeActivity using JADX-GUI  or MOBSF has hardcoded feature. 
+				resources->resources.arsc->res->values->strings.xml would find all kinds of string of application.
+				
+        
+		3. Hardcoded Issue (Part-2):
+		
+				jakhar.assem.diva->HardcodeActivity2 using JADX-GUI  or MOBSF has hardcoded feature. 
+				resources->lib->x86->libdivajni.so  this is library complied files that application load when run. 
+							its not human readable files.  cat libdivajni.so
+
+				cd /data/app/jakhar.assem.diva/lib/x86/libdivajni.so 											
+							after log into	adb console		string libdivajni.so
+									there we will get possible HardCoded password among those string values.
+							using source-code, we get the plain-text string.
+
+		4. Insecure Data Storage (Part-1):
+				
+				
+		
+							
+				
