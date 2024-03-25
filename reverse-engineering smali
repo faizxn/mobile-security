@@ -1,0 +1,9 @@
+
+Decompile APK using apktool
+
+- apktool d application.apk
+                         # then to view application architecture of smali code perform this activity.
+- find /application      
+                        # open this using putty and record all log session so that later it can analyse the smali code.   
+
+
